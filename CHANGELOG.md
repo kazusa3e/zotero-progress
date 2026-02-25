@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1
+
+- Remove "Mark all as read" button from section header
+- Replace plugin icon with circular progress indicator
+
 ## 0.1.0
 
 Initial release.

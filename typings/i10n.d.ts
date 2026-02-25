@@ -3,7 +3,6 @@
 /* eslint-disable */
 // @ts-nocheck
 export type FluentMessageId =
-  | 'progress-btn-mark-all'
   | 'progress-btn-refresh'
   | 'progress-no-toc'
   | 'progress-section-head'

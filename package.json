@@ -1,7 +1,7 @@
 {
   "name": "zotero-progress",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Track reading progress by TOC chapters in Zotero",
   "config": {
     "addonName": "Zotero Progress",

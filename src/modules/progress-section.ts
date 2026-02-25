@@ -172,27 +172,6 @@ export function registerProgressSection() {
     },
     sectionButtons: [
       {
-        type: "markAllRead",
-        icon: "chrome://zotero/skin/16/universal/check.svg",
-        l10nID: getLocaleID("progress-btn-mark-all"),
-        onClick: async ({ body, item }) => {
-          try {
-            const pair = resolveItems(item);
-            if (!pair) return;
-            const cached = tocCache.get(pair.attachment.id);
-            if (!cached || cached.length === 0) return;
-            const titles = cached.map((c) => c.title);
-            selfSaveInProgress = true;
-            await markChaptersRead(pair.parent, titles);
-            selfSaveInProgress = false;
-            renderSectionContent(body, pair);
-          } catch (e) {
-            selfSaveInProgress = false;
-            ztoolkit.log("Error marking all read", e);
-          }
-        },
-      },
-      {
         type: "refreshToc",
         icon: "chrome://zotero/skin/16/universal/sync.svg",
         l10nID: getLocaleID("progress-btn-refresh"),
