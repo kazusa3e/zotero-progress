@@ -1,0 +1,110 @@
+.zp-progress-container {
+  padding: 4px 6px;
+  font-size: 11px;
+}
+
+.zp-progress-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.zp-progress-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--fill-quinary);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.zp-progress-fill {
+  height: 100%;
+  background: var(--accent-blue);
+  border-radius: 2px;
+  transition: width 0.2s ease;
+}
+
+.zp-progress-text {
+  font-size: 10px;
+  color: var(--fill-secondary);
+  white-space: nowrap;
+}
+
+.zp-chapter-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.zp-chapter-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 4px;
+  border-radius: 3px;
+  min-height: 20px;
+}
+
+.zp-chapter-row:hover {
+  background: var(--fill-quinary);
+}
+
+.zp-chapter-row.zp-read .zp-chapter-title {
+  color: var(--fill-secondary);
+}
+
+.zp-chapter-row.zp-active {
+  background: var(--accent-blue10, rgba(0, 120, 212, 0.06));
+}
+
+.zp-chapter-row.zp-active:hover {
+  background: var(--accent-blue10, rgba(0, 120, 212, 0.1));
+}
+
+.zp-toggle {
+  width: 12px;
+  flex-shrink: 0;
+  cursor: pointer;
+  color: var(--fill-secondary);
+  font-size: 10px;
+  user-select: none;
+  text-align: center;
+  line-height: 1;
+}
+
+.zp-children.zp-collapsed {
+  display: none;
+}
+
+.zp-chapter-checkbox {
+  flex-shrink: 0;
+  margin: 0;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.zp-chapter-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.zp-chapter-title:hover {
+  text-decoration: underline;
+}
+
+.zp-chapter-time {
+  font-size: 9px;
+  color: var(--fill-tertiary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.zp-no-toc {
+  color: var(--fill-secondary);
+  font-style: italic;
+  padding: 4px 0;
+}
