@@ -94,7 +94,8 @@ function startPositionPolling(attachmentID: number) {
         const newExpanded = new Set<string>();
 
         // Keep manually expanded nodes
-        const oldExpanded = expandedState.get(attachmentID) || new Set<string>();
+        const oldExpanded =
+          expandedState.get(attachmentID) || new Set<string>();
         for (const title of oldExpanded) {
           if (manual.has(title)) {
             newExpanded.add(title);
@@ -146,7 +147,9 @@ function updateProgressDisplay(
   const container = body.querySelector(".zp-progress-container");
   if (!container) return;
 
-  const fill = container.querySelector(".zp-progress-fill") as HTMLElement | null;
+  const fill = container.querySelector(
+    ".zp-progress-fill",
+  ) as HTMLElement | null;
   if (fill) fill.style.width = `${pct}%`;
 
   const text = container.querySelector(".zp-progress-text");
@@ -398,8 +401,7 @@ function renderTree(
       toggle.textContent = isExpanded ? "\u25BC" : "\u25B6";
       toggle.addEventListener("click", (e) => {
         e.stopPropagation();
-        const exp =
-          expandedState.get(pair.attachment.id) || new Set<string>();
+        const exp = expandedState.get(pair.attachment.id) || new Set<string>();
         const manual =
           manuallyToggled.get(pair.attachment.id) || new Set<string>();
         if (exp.has(title)) {
@@ -431,7 +433,13 @@ function renderTree(
     checkbox.className = "zp-chapter-checkbox";
     checkbox.addEventListener("change", () => {
       if (flatChapter) {
-        onCheckboxChange(body, pair, flatChapter, checkbox.checked, setSectionSummary);
+        onCheckboxChange(
+          body,
+          pair,
+          flatChapter,
+          checkbox.checked,
+          setSectionSummary,
+        );
       }
     });
     row.append(checkbox);
@@ -513,7 +521,9 @@ async function onCheckboxChange(
         const rowTitle = row.dataset.title;
         if (!rowTitle || !titlesSet.has(rowTitle)) continue;
 
-        const cb = row.querySelector(".zp-chapter-checkbox") as HTMLInputElement | null;
+        const cb = row.querySelector(
+          ".zp-chapter-checkbox",
+        ) as HTMLInputElement | null;
         if (nowChecked) {
           row.classList.add("zp-read");
           if (cb) cb.checked = true;
