@@ -12,13 +12,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kazusa/zotero-progress.git"
+    "url": "git+https://github.com/kazusa3e/zotero-progress.git"
   },
   "author": "kazusa",
   "bugs": {
-    "url": "https://github.com/kazusa/zotero-progress/issues"
+    "url": "https://github.com/kazusa3e/zotero-progress/issues"
   },
-  "homepage": "https://github.com/kazusa/zotero-progress#readme",
+  "homepage": "https://github.com/kazusa3e/zotero-progress#readme",
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "start": "zotero-plugin serve",

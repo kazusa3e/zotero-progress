@@ -16,7 +16,7 @@ Zotero 8 plugin that tracks PDF/EPUB reading progress by TOC chapters in the Ite
 
 ## Install
 
-1. Download the latest `.xpi` from [Releases](https://github.com/kazusa/zotero-progress/releases)
+1. Download the latest `.xpi` from [Releases](https://github.com/kazusa3e/zotero-progress/releases)
 2. In Zotero: Tools → Add-ons → gear icon → Install Add-on From File → select the `.xpi`
 
 ## Build
